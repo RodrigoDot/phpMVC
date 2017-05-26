@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    require_once("../vendor/autoload.php");
+    require_once ("../vendor/autoload.php");
 ?>
 <html lang="pt-br">
 <head>
@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.min.css" />
 </head>
 <body>
-INIT
+<?php 
+    $init = new \app\Init;
+?>    
 </body>
 </html>

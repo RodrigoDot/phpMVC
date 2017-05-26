@@ -4,14 +4,14 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit44dfb4c97442516accc5c3236cc86c8f
+class ComposerStaticInit2227688d5cf4eae5364311d99ee10a35
 {
     public static $prefixesPsr0 = array (
         'd' => 
         array (
             'dot' => 
             array (
-                0 => __DIR__ . '/../..' . '/dot',
+                0 => 'U:\\xampp\\htdocs\\phpmvc\\vendor',
             ),
         ),
         'a' => 
@@ -26,7 +26,7 @@ class ComposerStaticInit44dfb4c97442516accc5c3236cc86c8f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInit44dfb4c97442516accc5c3236cc86c8f::$prefixesPsr0;
+            $loader->prefixesPsr0 = ComposerStaticInit2227688d5cf4eae5364311d99ee10a35::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

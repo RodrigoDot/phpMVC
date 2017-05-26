@@ -8,3 +8,4 @@ class Tester {
         echo'Hello classe Tester com nameSpace SUBCLASSES';
     }
 }
+ 
