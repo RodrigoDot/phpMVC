@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <?php
+    //REQUIRES DE ARQUIVOS
     require_once ("../app/init.php");
+
+    //INSTANCIAMENTOS DE CLASSES
+    $init = new \app\Init;
 ?>
 <html lang="pt-br">
 <head>
@@ -11,7 +15,7 @@
 </head>
 <body>
 <?php 
-    $init = new \app\Init;
+    echo $init->getUrl();
 ?>    
 </body>
 </html>
