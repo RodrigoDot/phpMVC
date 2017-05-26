@@ -15,7 +15,6 @@
 </head>
 <body>
 <?php 
-    echo $init->getUrl();
 ?>    
 </body>
 </html>
