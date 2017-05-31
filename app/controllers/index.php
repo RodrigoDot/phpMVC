@@ -17,10 +17,10 @@ class Index extends Action{
         
         $this->view->title = "Empresa";
         $this->view->nomes = $nomes;
-        $this->render(empresa);
+        $this->render('empresa');
     }
     
-    public function index() {
+    public function index() { 
         
         $nomes = array();
         $nomes[] = "index";
@@ -28,7 +28,7 @@ class Index extends Action{
         
         $this->view->title = "Index";
         $this->view->nomes = $nomes;
-        $this->render(index);
+        $this->render('index');
     }
         
     public function pagenotfound() {
