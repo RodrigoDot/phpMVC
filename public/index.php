@@ -5,6 +5,7 @@
 
     //INSTANCIAMENTOS DE CLASSES
     $init = new \app\Init;
+
 ?>
 <html lang="pt-br">
 <head>
@@ -15,6 +16,9 @@
 </head>
 <body>
 <?php 
+    
+    
+    
 ?>    
 </body>
 </html>

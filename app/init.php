@@ -1,42 +1,26 @@
 <?php
-
+//DECLARACAO DO NAMESPACE
 namespace app;
 
-class Init {
+//REQUISICAO DE INCLUSAO DOS ARQUIVOS
+require_once('controllers/index.php');
+require_once ("../vendor/dot/init/Bootstrap.php");
+
+//DEFINICAO DO NAMESPACE
+use \vendor\dot\init\Bootstrap;
+
+//INSTANCIAMENTO DA CLASSE DE INICIALIZACAO EXTENDIDA DA SUPER CLASSE BOOTSTRAP
+class Init extends Bootstrap {
     
-    private $routes;
-    
-    public function __construct() {
-        $this->initRoutes();
-        $this->run($this->getUrl());
-    }
-    
-    public function initRoutes() {
-        $array['home'] = array('route' => '/phpmvc/public/index.php', 'controller' => 'index', 'action' => 'index');
-        $array['empresa'] = array('route' => '/phpmvc/public/empresa.php', 'controller' => 'index', 'action' => 'empresa');
+    //DEFINE AS ROTAS POSSIVEIS PARA ENCAMINHA O USUARIO PARA SUAS RESPECTIVAS ACOES
+    /**
+    A FUNCAO INITROUTES DEFINE ARRAYS QUE RECEBEM A DECLARACAO DAS ROTAS
+    ESSA DECLARACAO EH EM FORMA DE UM ARRAY SEMELHANTE AO QUE UTILIZAMOS COM JSON
+    A ROTA($ROUTE) RECEBE UMA DEFINICAO(CAMINHO) UM CONTROLER(CONTROLLER) E UMA ACTION(ACTION)
+    */
+    protected function initRoutes() {
+        $array['home'] = array('route' => '/phpmvc/public/index', 'controller' => 'index', 'action' => 'index');
+        $array['empresa'] = array('route' => '/phpmvc/public/empresa', 'controller' => 'index', 'action' => 'empresa');
         $this->setRoutes($array);
     }
-    
-    public function run($url) {
-        array_walk($this->routes, function($route) use($url) {
-            if($url == $route['route']) {
-                echo'Encontrou</br>';
-            }
-        });
-    }
-    
-    public function setRoutes(array $routes) {
-        $this->routes = $routes;
-    }
-    
-    public function getUrl() {
-        return parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
-    }
-    
 }
-
-
-
-
-
-
