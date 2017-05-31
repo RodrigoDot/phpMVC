@@ -3,7 +3,6 @@
 namespace app;
 
 //REQUISICAO DE INCLUSAO DOS ARQUIVOS
-require_once('controllers/index.php');
 require_once ("../vendor/dot/init/Bootstrap.php");
 
 //DEFINICAO DO NAMESPACE
@@ -21,6 +20,7 @@ class Init extends Bootstrap {
     protected function initRoutes() {
         $array['home'] = array('route' => '/phpmvc/public/index', 'controller' => 'index', 'action' => 'index');
         $array['empresa'] = array('route' => '/phpmvc/public/empresa', 'controller' => 'index', 'action' => 'empresa');
+        $array['pagenotfound'] = array('route' => '/phpmvc/public/pagenotfound', 'controller' => 'index', 'action' => 'pagenotfound');
         $this->setRoutes($array);
     }
 }

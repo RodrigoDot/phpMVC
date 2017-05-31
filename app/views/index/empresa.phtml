@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Empresa</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../lib/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.min.css" />
+</head>
+<body>
+<?php 
+    
+    echo '<h1>' . $this->view->title . '</h1>';
+    
+    echo '<ul>';
+    foreach($this->view->nomes as $nome){
+        echo '<li>' . $nome. '</li>';
+    }
+    echo '</ul>';
+    
+?>    
+</body>
+</html>

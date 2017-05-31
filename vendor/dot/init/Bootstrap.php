@@ -10,7 +10,7 @@ require_once('../app/controllers/index.php');
 //DECLARACAO ABSTRATA PARA QUE NAO POSSA SER INSTANCIADA DIRETAMENTE
 abstract class Bootstrap {
     
-private $routes;
+    private $routes;
     
     public function __construct() {
         $this->initRoutes();
@@ -28,7 +28,7 @@ private $routes;
                 $action = $route['action'];//define a action a ser acessada
                 $controller->$action(); //action eh referencia a action na funcao initroutes 
             }
-        });
+        }); 
     }
     
     //DEFINE A ROTA
